@@ -1,13 +1,13 @@
-<fdp-button
-    [type]="type"
-    [menuTriggerFor]="menu"
+<button
+    fd-button
     [options]="menuOptions"
     [compact]="compact"
     [glyph]="icon"
     [disabled]="disabled"
     class="fdp-menu-btn-truncate__txt"
     (click)="onMenuButtonClick($event)"
+    [fdType]="type"
     [ngStyle]="{ width: width }"
 >
-    <ng-content></ng-content>
-</fdp-button>
+    {{ buttonLabel }}
+</button>

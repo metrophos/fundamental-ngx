@@ -1,4 +1,3 @@
-import { MenuComponent } from './../menu/menu.component';
 import { Component, ChangeDetectionStrategy, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export type MenuButtonType = 'standard' | 'positive' | 'medium' | 'negative' | 'toolbar' | 'main';
@@ -11,8 +10,19 @@ export type ButtonOptions = 'light' | 'emphasized' | 'menu';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MenuButtonComponent implements OnInit {
+    /** Id for menu-button. */
     @Input()
-    menu: MenuComponent;
+    Id: string;
+
+    /** menu reference string,
+     * which will open/close on menu-button click.
+     * */
+    @Input()
+    menu: string;
+
+    /** Label for menu-button. */
+    @Input()
+    buttonLabel: string;
 
     /** Option to make to menu-button compact. */
     @Input()
@@ -43,6 +53,8 @@ export class MenuButtonComponent implements OnInit {
     @Output()
     buttonClick = new EventEmitter();
 
+    /** local variable, to add 'menu' as button option */
+    /** @hidden */
     private menuOptions: string[] = new Array();
 
     /**
@@ -59,6 +71,7 @@ export class MenuButtonComponent implements OnInit {
 
     constructor() {}
 
+    /** @hidden */
     ngOnInit() {
         this.menuOptions.push('menu');
         if (this.options) {

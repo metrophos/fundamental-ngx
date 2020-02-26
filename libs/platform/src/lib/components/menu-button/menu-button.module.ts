@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuButtonComponent } from './menu-button.component';
-import { PlatformButtonModule } from './../button/button.module';
-import { FdpMenuModule } from './../menu/menu.module';
+import { ButtonModule } from '@fundamental-ngx/core';
 
 @NgModule({
     declarations: [MenuButtonComponent],
-    imports: [CommonModule, PlatformButtonModule, FdpMenuModule],
+    imports: [CommonModule, ButtonModule],
     exports: [MenuButtonComponent]
 })
 export class PlatformMenuButtonModule {}
