@@ -1,1 +1,1 @@
-export {compareObjects} from './compare-objects'
+export { compareObjects } from './compare-objects'
