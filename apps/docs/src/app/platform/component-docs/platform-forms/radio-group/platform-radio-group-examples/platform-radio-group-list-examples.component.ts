@@ -16,13 +16,8 @@ export class PlatformRadioGroupListExampleComponent {
     hasNoValue = 'true';
     noValueLabel = '(No selection)';
 
-    radioInput = {
-        name: 'radio-input-form-1',
-        formControlName: 'radioInput',
-        values: ['Option 1', 'Option 2', 'Option 3']
-    };
-
     customForm = new FormGroup({
-        radioInput: new FormControl(1)
+        example1: new FormControl(''),
+        example2: new FormControl('')
     });
 }

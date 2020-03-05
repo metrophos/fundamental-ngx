@@ -7,7 +7,7 @@
             [state]="state"
             [compact]="compact"
             [disabled]="disabled"
-            (change)="onRadioChange(undefined, $event)"
+            [(ngModel)]="value"
             (click)="onRadioClick($event)"
         >
             {{ noValueLabel }}
@@ -22,7 +22,7 @@
             [state]="item.state ? item.state : state"
             [compact]="item.compact ? item.compact : compact"
             [disabled]="item.disabled ? item.disabled : disabled"
-            (change)="onRadioChange(item, $event)"
+            [(ngModel)]="value"
             (click)="onRadioClick($event)"
         >
             {{ item.label ? item.label : item }}

@@ -56,9 +56,6 @@ export class RadioGroupComponent extends BaseInput {
         super.setValue(value);
     }
 
-    @Output()
-    readonly change: EventEmitter<SelectItem | string> = new EventEmitter<SelectItem | string>();
-
     protected _isInline: boolean = false;
 
     constructor(
@@ -71,19 +68,10 @@ export class RadioGroupComponent extends BaseInput {
 
     onRadioClick(event: MouseEvent) {
         event.stopPropagation();
-        console.log('radio button clicked: ' + this.value);
-    }
-
-    onRadioChange(item: SelectItem | string, event: Event) {
-        console.log('radio button onRadioChange: ' + this.value);
-        event.stopPropagation();
-        this.value = item;
-        this.change.emit(this.value);
     }
 
     writeValue(value: any): void {
         super.writeValue(value);
         this._cd.markForCheck();
-        console.log('radio button writeValue: ' + this.value);
     }
 }

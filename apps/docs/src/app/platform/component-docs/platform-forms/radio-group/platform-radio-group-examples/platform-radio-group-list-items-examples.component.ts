@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 export type stateType = 'valid' | 'invalid' | 'warning' | 'default' | 'information';
 
@@ -7,6 +8,13 @@ export type stateType = 'valid' | 'invalid' | 'warning' | 'default' | 'informati
     templateUrl: './platform-radio-group-list-items-example.component.html'
 })
 export class PlatformRadioGroupListItemsExampleComponent {
+    customForm = new FormGroup({
+        example1: new FormControl(''),
+        example2: new FormControl(''),
+        example3: new FormControl(''),
+        example4: new FormControl(''),
+    });
+
     items = [
         {
             label: 'Option 1',

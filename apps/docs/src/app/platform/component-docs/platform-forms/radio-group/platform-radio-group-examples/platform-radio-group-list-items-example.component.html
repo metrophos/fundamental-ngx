@@ -1,19 +1,31 @@
+<form [formGroup]="customForm" class="flex-form">
+    <p>Example 1: Radio Buttons Types</p>
+    <fieldset fd-fieldset>
+        <fdp-radio-group [name]="'radio1'" [list]="items" [isInline]="false" formControlName="example1">
+        </fdp-radio-group>
+    </fieldset>
+    <p>Example 2: Radio Buttons Compact</p>
+    <fieldset fd-fieldset>
+        <fdp-radio-group [name]="'radio1'" [list]="itemsCompact" [isInline]="false" formControlName="example2">
+        </fdp-radio-group>
+    </fieldset>
+    <p>Example 3: Radio Buttons Disabled</p>
+    <fieldset fd-fieldset>
+        <fdp-radio-group [name]="'radio1'" [list]="itemsDisabled" [isInline]="false" formControlName="example3">
+        </fdp-radio-group>
+    </fieldset>
+    <p>Example 4: Radio Buttons Inline</p>
+    <fieldset fd-fieldset>
+        <fdp-radio-group [name]="'radio1'" [list]="items" [isInline]="true" formControlName="example4">
+        </fdp-radio-group>
+    </fieldset>
+</form>
 <div>
-    Radio Buttons Types
-    <fdp-radio-group [id]="'radio1'" [list]="items" [isInline]="false"> </fdp-radio-group>
-</div>
-
-<div>
-    Radio Buttons Compact
-    <fdp-radio-group [id]="'radio2'" [list]="itemsCompact" [isInline]="false"> </fdp-radio-group>
-</div>
-
-<div>
-    Radio Buttons Disabled
-    <fdp-radio-group [id]="'radio3'" [list]="itemsDisabled" [isInline]="false"> </fdp-radio-group>
-</div>
-
-<div>
-    Radio Buttons Inline
-    <fdp-radio-group [id]="'radio4'" [list]="items" [isInline]="true"> </fdp-radio-group>
+    Example 1: {{ customForm.value.example1 }}
+    <br />
+    Example 2: {{ customForm.value.example2 }}
+    <br />
+    Example 3: {{ customForm.value.example3 }}
+    <br />
+    Example 4: {{ customForm.value.example4 }}
 </div>
