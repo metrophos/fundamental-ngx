@@ -56,6 +56,7 @@ import { NotificationService } from './notification/notification-service/notific
 import { NestedListModule } from './nested-list/nested-list.module';
 import { RadioModule } from './radio/radio.module';
 import { LinkModule } from './link/link.module';
+import { ObjectStatusModule } from './object-status/object-status.module';
 
 @NgModule({
   imports: [CommonModule, FormsModule],
@@ -94,6 +95,7 @@ import { LinkModule } from './link/link.module';
     MultiInputModule,
     NestedListModule,
     NotificationModule,
+    ObjectStatusModule,
     PaginationModule,
     PanelModule,
     ProductSwitchModule,
