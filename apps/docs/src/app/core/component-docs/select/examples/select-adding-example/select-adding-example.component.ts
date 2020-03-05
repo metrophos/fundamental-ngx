@@ -7,18 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SelectAddingExampleComponent {
 
-    selectValue: string;
-
-    options: string[] = [
-        'Tomato',
-        'Pineapple',
-        'Apple'
-    ];
-
+    options: string[] = ['Apple', 'Pineapple', 'Tomato', 'Strawberry'];
+    selectedValue: string;
     addedOptions: number = 1;
 
     addOption(): void {
-        this.options.push('added option ' + this.addedOptions++);
+        this.options.push(`New option ${this.addedOptions++}`);
     }
 
     removeOption(): void {
@@ -26,5 +20,4 @@ export class SelectAddingExampleComponent {
             this.options.pop();
         }
     }
-
 }
