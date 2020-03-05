@@ -27,9 +27,24 @@
         >
         </fdp-radio-group>
     </fieldset>
+    <p>Example 3: Radio Groups with Empty list</p>
+    <fieldset fd-fieldset>
+        <fdp-radio-group [id]="'radio3'" [name]="'radio3'" formControlName="example3">
+            <fd-radio-button
+                [value]="'option1'"
+                [state]="'valid'"
+                [compact]="true"
+                [disabled]="true"
+            >
+                Option 1
+            </fd-radio-button>
+        </fdp-radio-group>
+    </fieldset>
 </form>
 <div>
     Example 1: {{ customForm.value.example1 }}
     <br />
     Example 2: {{ customForm.value.example2 }}
+    <br />
+    Example 2: {{ customForm.value.example3 }}
 </div>

@@ -18,6 +18,7 @@ export class PlatformRadioGroupListExampleComponent {
 
     customForm = new FormGroup({
         example1: new FormControl(''),
-        example2: new FormControl('')
+        example2: new FormControl(''),
+        example3: new FormControl('')
     });
 }
