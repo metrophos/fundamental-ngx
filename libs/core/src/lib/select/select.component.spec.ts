@@ -157,7 +157,7 @@ describe('SelectComponent', () => {
         fixture.componentInstance.wrapperValue = testValue;
         fixture.detectChanges();
         tick();
-        expect(component.triggerValue).toBe('testViewValue');
+        expect(component.selectValue).toBe('testViewValue');
         expect(component.value).toBe(testValue);
     }));
 
@@ -167,7 +167,7 @@ describe('SelectComponent', () => {
         tick();
         document.body.querySelector('#nestedOption').dispatchEvent(new MouseEvent('click'));
         expect(component.value).toBe('nestedOption');
-        expect(component.triggerValue).toBe('Nested');
+        expect(component.selectValue).toBe('Nested');
     }));
 
     it('Should not unselect option, when this is switched off', (() => {
