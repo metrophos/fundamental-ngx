@@ -140,6 +140,10 @@ export const ROUTES: Routes = [
                 loadChildren: () => import('./component-docs/notification/notification-docs.module').then(m => m.NotificationDocsModule)
             },
             {
+                path: 'object-status',
+                loadChildren: () => import('./component-docs/object-status/object-status-docs.module').then(m => m.ObjectStatusDocsModule)
+            },
+            {
                 path: 'pagination',
                 loadChildren: () => import('./component-docs/pagination/pagination-docs.module').then(m => m.PaginationDocsModule)
             },
