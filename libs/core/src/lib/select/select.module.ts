@@ -8,6 +8,7 @@ import { IconModule } from '../icon/icon.module';
 import { LoadingSpinnerModule } from '../loading-spinner/loading-spinner.module';
 import { BusyIndicatorModule } from '../busy-indicator/busy-indicator.module';
 import { ListModule } from '../list/list.module';
+import { ModalModule } from '../modal/modal.module';
 
 @NgModule({
     declarations: [
@@ -20,13 +21,14 @@ import { ListModule } from '../list/list.module';
         ListModule
     ],
     imports: [
+        LoadingSpinnerModule,
         BusyIndicatorModule,
         CommonModule,
         PopoverModule,
         ButtonModule,
         IconModule,
-        LoadingSpinnerModule,
-        ListModule
+        ListModule,
+        ModalModule
     ]
 })
 export class SelectModule { }
