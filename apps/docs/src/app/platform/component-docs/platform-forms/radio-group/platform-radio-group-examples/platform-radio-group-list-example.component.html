@@ -1,50 +1,70 @@
+<p>Reactive form Examples</p>
 <form [formGroup]="customForm" class="flex-form">
-    <p>Example 1: Radio Groups Example</p>
+    <p>Example 1: Radio Button Group created with given list of string values, with default value</p>
     <fieldset fd-fieldset>
         <fdp-radio-group
             [id]="'radio1'"
-            [name]="name"
-            [list]="options"
+            [name]="'radio1'"
+            [list]="seasons"
             [isInline]="false"
-            [compact]="compact"
-            [state]="state"
+            [state]="'invalid'"
+            [size]="'cozy'"
+            [value]="'Summer'"
             formControlName="example1"
         >
         </fdp-radio-group>
     </fieldset>
-    <p>Example 2: Radio Groups with No Value</p>
+    <p>Example 2: Radio Button Group with None (No selection) Value</p>
     <fieldset fd-fieldset>
         <fdp-radio-group
             [id]="'radio2'"
-            [name]="name"
-            [list]="options"
-            [isInline]="false"
-            [compact]="compact"
-            [state]="state"
+            [name]="'radio2'"
+            [list]="seasons"
+            [isInline]="true"
+            [state]="'information'"
+            [size]="'compact'"
             [hasNoValue]="true"
-            [noValueLabel]="noValueLabel"
+            [noValueLabel]="'(No Selection)'"
             formControlName="example2"
         >
         </fdp-radio-group>
     </fieldset>
-    <p>Example 3: Radio Groups with Empty list</p>
+</form>
+
+<div>
+    Example 1 selelected value: {{ customForm.get('example1').value }}
+    <br />
+    Example 2 selelected value: {{ customForm.get('example2').value }}
+</div>
+
+<br />
+<p>Template Driven Form</p>
+<form class="flex-form">
+    <p>Example 3: Radio Button Group Example with given list of string values, default value selection</p>
     <fieldset fd-fieldset>
-        <fdp-radio-group [id]="'radio3'" [name]="'radio3'" formControlName="example3">
-            <fd-radio-button
-                [value]="'option1'"
-                [state]="'valid'"
-                [compact]="true"
-                [disabled]="true"
-            >
-                Option 1
-            </fd-radio-button>
+        <fdp-radio-group
+            [name]="'radio4'"
+            [value]="'Summer'"
+            [list]="seasons"
+            [size]="'cozy'"
+            [state]="'default'"
+            [isInline]="true"
+            [(ngModel)]="favoriteOption"
+        >
+        </fdp-radio-group>
+    </fieldset>
+    <p>Example 4: Radio Button Group Example with given list of string values</p>
+    <fieldset fd-fieldset>
+        <fdp-radio-group
+            [name]="'radio4'"
+            [list]="seasons"
+            [size]="'compact'"
+            [state]="'warning'"
+            [isInline]="true"
+            [(ngModel)]="favoriteOption2"
+        >
         </fdp-radio-group>
     </fieldset>
 </form>
-<div>
-    Example 1: {{ customForm.value.example1 }}
-    <br />
-    Example 2: {{ customForm.value.example2 }}
-    <br />
-    Example 2: {{ customForm.value.example3 }}
-</div>
+<div>Example 3 selelected option: {{ favoriteOption }}</div>
+<div>Example 4 selelected option: {{ favoriteOption2 }}</div>

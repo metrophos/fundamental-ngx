@@ -49,16 +49,19 @@ import { PlatformMenuXPositionExampleComponent } from './component-docs/platform
 import { PlatformMenuCascadeExampleComponent } from './component-docs/platform-menu/platform-menu-examples/platform-menu-cascade-example.component';
 import { PlatformMenuScrollingExampleComponent } from './component-docs/platform-menu/platform-menu-examples/platform-menu-scrolling-example.component';
 
+import { PlatformRadioGroupHeaderComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-header/platform-radio-group-header.component';
+import { PlatformRadioGroupListItemsExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-list-items-examples.component';
+import { PlatformRadioGroupListExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-list-examples.component';
+import { PlatformRadioGroupDocsComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-docs.component';
+import { PlatformRadioGroupContentExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-content-examples.component';
+import { PlatformRadioGroupDisabledExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-disabled-examples.component';
+
 import { PlatformSelectDocsComponent } from './component-docs/platform-select/platform-select-docs.component';
 import { PlatformSelectHeaderComponent } from './component-docs/platform-select/platform-select-header/platform-select-header.component';
 import { PlatformSelectTypesDefaultExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-default-example.component';
 import { PlatformSelectTypesNoBorderExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-noborder-example.component';
 import { PlatformSelectTypesSplitExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-split-example.component';
 import { PlatformSelectTypesWithIconExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-with-icon-example.component';
-import { PlatformRadioGroupHeaderComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-header/platform-radio-group-header.component';
-import { PlatformRadioGroupListItemsExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-list-items-examples.component';
-import { PlatformRadioGroupListExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-list-examples.component';
-import { PlatformRadioGroupDocsComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-docs.component';
 
 import { StackblitzService } from '../documentation/core-helpers/stackblitz/stackblitz.service';
 import { FundamentalNgxCoreModule } from '@fundamental-ngx/core';
@@ -112,6 +115,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         PlatformRadioGroupHeaderComponent,
         PlatformRadioGroupListItemsExampleComponent,
         PlatformRadioGroupListExampleComponent,
+        PlatformRadioGroupContentExampleComponent,
+        PlatformRadioGroupDisabledExampleComponent,
         PlatformRadioGroupDocsComponent
     ],
     imports: [

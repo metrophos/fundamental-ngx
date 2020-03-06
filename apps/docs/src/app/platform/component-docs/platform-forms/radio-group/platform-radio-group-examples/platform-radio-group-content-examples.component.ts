@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-    selector: 'fdp-platform-radio-group-list-example',
-    templateUrl: './platform-radio-group-list-example.component.html',
+    selector: 'fdp-platform-radio-group-content-example',
+    templateUrl: './platform-radio-group-content-example.component.html',
 })
-export class PlatformRadioGroupListExampleComponent {
+export class PlatformRadioGroupContentExampleComponent {
+    favoriteSeason: string = '';
+    favoriteSeason2: string = '';
     seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
 
-    favoriteOption: string = '';
-    favoriteOption2: string = '';
     customForm = new FormGroup({
         example1: new FormControl({ value: '', disabled: false }),
         example2: new FormControl({ value: '', disabled: false }),
+        example3: new FormControl({ value: 'Winter', disabled: false }),
     });
 }
