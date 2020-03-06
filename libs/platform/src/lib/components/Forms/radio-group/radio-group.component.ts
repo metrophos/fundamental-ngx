@@ -1,13 +1,4 @@
-import {
-    ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component,
-    EventEmitter,
-    Input,
-    Optional,
-    Output,
-    Self
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, Optional, Self } from '@angular/core';
 import { FormFieldControl } from '../form-control';
 import { NgControl, NgForm } from '@angular/forms';
 import { BaseInput } from '../base.input';
