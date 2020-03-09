@@ -5,6 +5,8 @@ import * as titleTruncationExample from '!raw-loader!./examples/action-bar-long-
 import * as contextualMenuExample from '!raw-loader!./examples/action-bar-contextual-menu-example.component.html';
 import * as mobileExample from '!raw-loader!./examples/action-bar-mobile-example.component.html';
 import * as noBackButtonExample from '!raw-loader!./examples/action-bar-no-back-example.component.html';
+import * as mediumLargeViewHtml from '!raw-loader!./examples//action-bar-responsive-M_L-example.component.html';
+import * as xtraLargeViewHtml from '!raw-loader!./examples//action-bar-responsive-XL-example.component.html';
 import { ExampleFile } from '../../../documentation/core-helpers/code-example/example-file';
 
 @Component({
@@ -17,7 +19,7 @@ export class ActionBarDocsComponent {
         {
             language: 'html',
             code: backButtonExample,
-            fileName: 'action-bar-back',
+            fileName: 'action-bar-back'
         }
     ];
 
@@ -25,7 +27,7 @@ export class ActionBarDocsComponent {
         {
             language: 'html',
             code: titleTruncationExample,
-            fileName: 'action-bar-long-string-title-truncation',
+            fileName: 'action-bar-long-string-title-truncation'
         }
     ];
 
@@ -33,7 +35,7 @@ export class ActionBarDocsComponent {
         {
             language: 'html',
             code: noBackButtonExample,
-            fileName: 'action-bar-no-back',
+            fileName: 'action-bar-no-back'
         }
     ];
 
@@ -41,7 +43,7 @@ export class ActionBarDocsComponent {
         {
             language: 'html',
             code: contextualMenuExample,
-            fileName: 'action-bar-contextual-menu',
+            fileName: 'action-bar-contextual-menu'
         }
     ];
 
@@ -49,7 +51,21 @@ export class ActionBarDocsComponent {
         {
             language: 'html',
             code: mobileExample,
-            fileName: 'action-bar-mobile',
+            fileName: 'action-bar-mobile'
+        }
+    ];
+    mediumLargeViewHtml: ExampleFile[] = [
+        {
+            language: 'html',
+            code: mediumLargeViewHtml,
+            fileName: 'action-bar-responsive-M_L'
+        }
+    ];
+    xtraLargeViewHtml: ExampleFile[] = [
+        {
+            language: 'html',
+            code: xtraLargeViewHtml,
+            fileName: 'action-bar-responsive-XL'
         }
     ];
 }

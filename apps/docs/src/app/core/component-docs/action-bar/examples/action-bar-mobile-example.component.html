@@ -1,40 +1,46 @@
 <div fd-action-bar-mobile>
-    <div fd-action-bar>
-        <div fd-action-bar-back>
-            <button aria-label="back" fd-button [fdType]="'light'" [compact]="true" [glyph]="'nav-back'"></button>
-        </div>
+    <div fd-action-bar fd-action-bar-small>
         <div fd-action-bar-header>
+            <div fd-action-bar-back>
+                <button aria-label="back" fd-button [fdType]="'light'" [compact]="true" [glyph]="'nav-back'"></button>
+            </div>
             <h3 fd-action-bar-title>Page Title</h3>
-            <div fd-action-bar-description>Action bar Description</div>
-        </div>
-        <div fd-action-bar-actions>
-            <fd-popover placement="bottom-end">
-                <fd-popover-control>
-                    <button aria-label="More" aria-haspopup="true" fd-button [fdType]="'light'"
-                        [glyph]="'overflow'"></button>
-                </fd-popover-control>
-                <fd-popover-body>
-                    <fd-menu>
-                        <ul fd-menu-list>
-                            <li fd-menu-item>
-                                Edit
-                            </li>
-                            <li fd-menu-item>
-                                Delete
-                            </li>
-                            <li fd-menu-item>
-                                Assign
-                            </li>
-                            <li fd-menu-item>
-                                Expire
-                            </li>
-                            <li fd-menu-item>
-                                Archive
-                            </li>
-                        </ul>
-                    </fd-menu>
-                </fd-popover-body>
-            </fd-popover>
+
+            <div fd-action-bar-actions>
+                <fd-popover placement="bottom-end">
+                    <fd-popover-control>
+                        <button
+                            [compact]="true"
+                            aria-label="More"
+                            aria-haspopup="true"
+                            fd-button
+                            [glyph]="'overflow'"
+                        ></button>
+                    </fd-popover-control>
+                    <fd-popover-body>
+                        <fd-menu>
+                            <ul fd-menu-list>
+                                <li fd-menu-item>
+                                    Edit
+                                </li>
+                                <li fd-menu-item>
+                                    Delete
+                                </li>
+                                <li fd-menu-item>
+                                    Assign
+                                </li>
+                                <li fd-menu-item>
+                                    Expire
+                                </li>
+                                <li fd-menu-item>
+                                    Archive
+                                </li>
+                            </ul>
+                        </fd-menu>
+                    </fd-popover-body>
+                </fd-popover>
+            </div>
         </div>
     </div>
+    <div fd-action-bar-description-with-backbtn>Action bar Description</div>
 </div>
