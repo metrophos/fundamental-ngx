@@ -15,7 +15,7 @@
     </div>
     <p
         *ngIf="description"
-        [ngClass]="'showBackButton ? fd-action-bar__description--with-backBtn : fd-action-bar__description'"
+        [ngClass]="showBackButton ? 'fd-action-bar__description--with-backBtn' : 'fd-action-bar__description'"
         fd-action-bar-description
         [attr.title]="description"
         data-tag="actionbar__description"
