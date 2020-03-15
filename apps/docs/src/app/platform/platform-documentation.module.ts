@@ -60,6 +60,9 @@ import { FundamentalNgxCoreModule } from '@fundamental-ngx/core';
 import { FundamentalNgxPlatformModule } from '@fundamental-ngx/platform';
 
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PlatformComboboxDocsComponent } from './component-docs/platform-combobox/platform-combobox-docs.component';
+import { PlatformComboboxHeaderComponent } from './component-docs/platform-combobox/platform-combobox-header/platform-combobox-header.component';
+import { PlatformComboboxTypesDefaultExampleComponent } from './component-docs/platform-combobox/platform-combobox-examples/platform-combobox-types-default-example.component';
 
 @NgModule({
     declarations: [
@@ -103,7 +106,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         PlatformSelectTypesDefaultExampleComponent,
         PlatformSelectTypesNoBorderExampleComponent,
         PlatformSelectTypesSplitExampleComponent,
-        PlatformSelectTypesWithIconExampleComponent
+        PlatformSelectTypesWithIconExampleComponent,
+        PlatformComboboxDocsComponent,
+        PlatformComboboxHeaderComponent,
+        PlatformComboboxTypesDefaultExampleComponent
     ],
     imports: [
         FundamentalNgxCoreModule,

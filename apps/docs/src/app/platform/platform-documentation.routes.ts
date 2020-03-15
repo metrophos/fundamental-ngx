@@ -14,6 +14,8 @@ import { PlatformSelectHeaderComponent } from './component-docs/platform-select/
 import { PlatformSelectDocsComponent } from './component-docs/platform-select/platform-select-docs.component';
 import { PlatformLinkHeaderComponent } from './component-docs/platform-link/platform-link-header/platform-link-header.component';
 import { PlatformLinkDocsComponent } from './component-docs/platform-link/platform-link-docs.component';
+import { PlatformComboboxHeaderComponent } from './component-docs/platform-combobox/platform-combobox-header/platform-combobox-header.component';
+import { PlatformComboboxDocsComponent } from './component-docs/platform-combobox/platform-combobox-docs.component';
 
 export const ROUTES: Routes = [
     {
@@ -61,6 +63,14 @@ export const ROUTES: Routes = [
                 children: [
                     { path: '', component: PlatformSelectDocsComponent },
                     { path: 'api', component: ApiComponent, data: { content: API_FILES.menu } }
+                ]
+            },
+            {
+                path: 'combobox',
+                component: PlatformComboboxHeaderComponent,
+                children: [
+                    { path: '', component: PlatformComboboxDocsComponent },
+                    { path: 'api', component: ApiComponent, data: { content: API_FILES.combobox } }
                 ]
             }
         ]
