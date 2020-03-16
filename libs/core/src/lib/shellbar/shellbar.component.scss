@@ -8,4 +8,40 @@
             margin-left: -12px;
         }
     }
+
+    .fd-shellbar__button {
+        background-image: none;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: 0;
+        border: 0;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        background-color: transparent;
+        border-radius: 0.25rem;
+
+        &:hover {
+            background-color: #283848;
+            background-color: var(--sapShell_Hover_Background, #283848);
+            color: #fff;
+            color: var(--sapShell_TextColor, #fff);
+        }
+
+        &:active {
+            background-color: #23303e;
+            background-color: var(--sapShell_Active_Background, #23303e);
+            color: #fff;
+            color: var(--sapShell_Active_TextColor, #fff);
+        }
+    }
 }
