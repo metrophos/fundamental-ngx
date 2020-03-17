@@ -2,22 +2,34 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'fd-object-status-default-example',
+<<<<<<< HEAD
     templateUrl: './object-status-default-example.component.html',
     styleUrls: ['./object-status-examples.component.scss']
+=======
+    templateUrl: './object-status-default-example.component.html'
+>>>>>>> 0bbba775f01deb5e37eac8645f6372628a9eb094
 })
 export class ObjectStatusDefaultExampleComponent { }
 
 @Component({
     selector: 'fd-object-status-text-example',
+<<<<<<< HEAD
     templateUrl: './object-status-text-example.component.html',
     styleUrls: ['./object-status-examples.component.scss']
+=======
+    templateUrl: './object-status-text-example.component.html'
+>>>>>>> 0bbba775f01deb5e37eac8645f6372628a9eb094
 })
 export class ObjectStatusTextExampleComponent { }
 
 @Component({
     selector: 'fd-object-status-generic-text-example',
+<<<<<<< HEAD
     templateUrl: './object-status-generic-text-example.component.html',
     styleUrls: ['./object-status-examples.component.scss']
+=======
+    templateUrl: './object-status-generic-text-example.component.html'
+>>>>>>> 0bbba775f01deb5e37eac8645f6372628a9eb094
 })
 export class ObjectStatusGenericExampleComponent { }
 
