@@ -18,6 +18,13 @@ export type ButtonOptions = 'light' | 'emphasized' | 'menu';
     template: `<ng-content></ng-content>`,
     styleUrls: ['./button.component.scss'],
     encapsulation: ViewEncapsulation.None,
+    host: {
+        '[attr.aria-labelledby]': 'ariaLabelledBy',
+        '[attr.aria-label]': 'ariaLabel',
+        'role': 'button',
+        '[attr.id]': 'id',
+        'title': 'title'
+    },
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent implements OnInit, CssClassBuilder, CssStyleBuilder {
@@ -59,6 +66,10 @@ export class ButtonComponent implements OnInit, CssClassBuilder, CssStyleBuilder
     /** @hidden */
     constructor(private _elementRef: ElementRef) {
     }
+
+    ariaLabelledBy: string = null;
+
+    ariaLabel: string = null;
 
     /** Function runs when component is initialized
      * function should build component css class
