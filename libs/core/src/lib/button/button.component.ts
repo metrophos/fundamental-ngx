@@ -3,6 +3,7 @@ import { CssStyleBuilder, Hash, applyCssClass, CssClassBuilder, applyCssStyle } 
 
 export type ButtonType = 'standard' | 'positive' | 'medium' | 'negative' | 'half';
 export type ButtonOptions = 'light' | 'emphasized' | 'menu';
+let buttonUniqueId: number = 0;
 
 /**
  * Button directive, used to enhance standard HTML buttons.
@@ -28,6 +29,7 @@ export type ButtonOptions = 'light' | 'emphasized' | 'menu';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent implements OnInit, CssClassBuilder, CssStyleBuilder {
+
     private _class: string = '';
     @Input() set class(userClass: string) {
         this._class = userClass;
@@ -62,6 +64,10 @@ export class ButtonComponent implements OnInit, CssClassBuilder, CssStyleBuilder
 
     /** @hidden */
     @Input() size: string; // TODO: deprecated, leaving for backwards compatibility
+
+    /** Id for the button component. If omitted, a unique one is generated. */
+    @Input()
+    id: string = 'fd-switch-' + buttonUniqueId++;
 
     /** @hidden */
     constructor(private _elementRef: ElementRef) {
