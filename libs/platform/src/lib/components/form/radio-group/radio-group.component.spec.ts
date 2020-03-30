@@ -2,9 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Component, ContentChildren, ViewChild, ViewChildren } from '@angular/core';
 import { FormControl, ReactiveFormsModule, FormGroup, FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
-import { PlatformRadioButtonComponent } from './radio/radio.component';
-import { RadioGroupComponent } from './radio-group.component';
-import { FormModule, RadioModule, RadioButtonComponent } from '@fundamental-ngx/core';
+import { RadioButtonComponent } from './radio/radio.component';
+import { GroupRadioButtonComponent } from './radio-group.component';
+import { FormModule, RadioModule } from '@fundamental-ngx/core';
 
 @Component({
     selector: 'fdp-test-radio-group',
@@ -35,22 +35,19 @@ class TestComponentContent {
         example1: new FormControl({ value: '', disabled: false }),
     });
 
-    @ViewChild(RadioGroupComponent)
-    radioGroup: RadioGroupComponent;
-
-    @ContentChildren(RadioButtonComponent)
-    radioButtons: RadioButtonComponent;
+    @ViewChild(GroupRadioButtonComponent)
+    radioGroup: GroupRadioButtonComponent;
 }
 
-describe('RadioGroupComponent', () => {
+describe('GroupRadioButtonComponent', () => {
     let host: TestComponentContent;
-    let component: RadioGroupComponent;
+    let component: GroupRadioButtonComponent;
     let fixture: ComponentFixture<TestComponentContent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [FormModule, RadioModule, ReactiveFormsModule],
-            declarations: [TestComponentContent, RadioGroupComponent, PlatformRadioButtonComponent],
+            declarations: [TestComponentContent, GroupRadioButtonComponent, RadioButtonComponent],
         }).compileComponents();
     }));
 
@@ -130,22 +127,22 @@ class TestComponentList {
 
     favoriteSeason: string = '';
 
-    @ViewChild(RadioGroupComponent)
-    radioGroup: RadioGroupComponent;
+    @ViewChild(GroupRadioButtonComponent)
+    radioGroup: GroupRadioButtonComponent;
 
-    @ViewChildren(PlatformRadioButtonComponent)
-    radioButtons: PlatformRadioButtonComponent;
+    @ViewChildren(RadioButtonComponent)
+    radioButtons: RadioButtonComponent;
 }
 
-describe('RadioGroupComponent', () => {
+describe('GroupRadioButtonComponent', () => {
     let host: TestComponentList;
-    let component: RadioGroupComponent;
+    let component: GroupRadioButtonComponent;
     let fixture: ComponentFixture<TestComponentList>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [FormModule, RadioModule, FormsModule],
-            declarations: [TestComponentList, RadioGroupComponent, PlatformRadioButtonComponent],
+            declarations: [TestComponentList, GroupRadioButtonComponent, RadioButtonComponent],
         }).compileComponents();
     }));
 
@@ -200,6 +197,4 @@ describe('RadioGroupComponent', () => {
         fixture.detectChanges();
         expect(host.favoriteSeason).toEqual('Autumn');
     });
-
-    it('should emit change event on radio button change', () => {});
 });

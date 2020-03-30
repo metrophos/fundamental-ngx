@@ -1,21 +1,21 @@
 import { By } from '@angular/platform-browser';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { PlatformRadioButtonComponent } from './radio.component';
+import { RadioButtonComponent } from './radio.component';
 import { RadioModule, FormModule, FormGroupComponent } from '@fundamental-ngx/core';
 
-describe('RadioComponent', () => {
-    let component: PlatformRadioButtonComponent;
-    let fixture: ComponentFixture<PlatformRadioButtonComponent>;
+describe('RadioButtonComponent', () => {
+    let component: RadioButtonComponent;
+    let fixture: ComponentFixture<RadioButtonComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [RadioModule, FormModule],
-            declarations: [PlatformRadioButtonComponent, FormGroupComponent],
+            declarations: [RadioButtonComponent, FormGroupComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(PlatformRadioButtonComponent);
+        fixture = TestBed.createComponent(RadioButtonComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

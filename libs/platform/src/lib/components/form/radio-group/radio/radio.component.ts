@@ -10,7 +10,7 @@ import {
     TemplateRef,
     ChangeDetectionStrategy,
 } from '@angular/core';
-import { RadioButtonComponent, stateType } from '@fundamental-ngx/core';
+import { RadioButtonComponent as CoreRadioButtonComponent, stateType } from '@fundamental-ngx/core';
 import { NgControl, NgForm } from '@angular/forms';
 import { BaseInput } from '../../base.input';
 
@@ -19,10 +19,9 @@ let uniqueId = 0;
 @Component({
     selector: 'fdp-radio-button',
     templateUrl: './radio.component.html',
-    styleUrls: ['./radio.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PlatformRadioButtonComponent extends BaseInput {
+export class RadioButtonComponent extends BaseInput {
     /** Setting default value for mandatory field id */
     @Input()
     id: string = `radio-id-${uniqueId++}`;
@@ -62,11 +61,11 @@ export class PlatformRadioButtonComponent extends BaseInput {
 
     /** click event to emit */
     @Output()
-    readonly click: EventEmitter<PlatformRadioButtonComponent> = new EventEmitter();
+    readonly click: EventEmitter<RadioButtonComponent> = new EventEmitter();
 
     /** Access radio button child elemen passed as content of radio button group*/
-    @ViewChild(RadioButtonComponent, { static: false })
-    coreRadioButton: RadioButtonComponent;
+    @ViewChild(CoreRadioButtonComponent, { static: false })
+    coreRadioButton: CoreRadioButtonComponent;
 
     /** reference of template */
     @ViewChild('renderer')

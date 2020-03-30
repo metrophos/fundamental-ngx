@@ -16,7 +16,7 @@ import { NgControl, NgForm } from '@angular/forms';
 import { stateType } from '@fundamental-ngx/core';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { PlatformRadioButtonComponent } from './radio/radio.component';
+import { RadioButtonComponent } from './radio/radio.component';
 import { SelectItem } from '../data-model';
 import { CollectionBaseInput } from '../collection-base.input';
 
@@ -28,7 +28,7 @@ let nextUniqueId = 0;
     templateUrl: './radio-group.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RadioGroupComponent extends CollectionBaseInput implements AfterViewInit {
+export class GroupRadioButtonComponent extends CollectionBaseInput implements AfterViewInit {
     /** uniqly generated, if value not provided for id */
     @Input()
     id: string = `radio-group-${nextUniqueId++}`;
@@ -72,18 +72,18 @@ export class RadioGroupComponent extends CollectionBaseInput implements AfterVie
     noValueLabel: string = 'None';
 
     /** Child radio buttons <fdp-radio-buttons> passed as contents*/
-    @ContentChildren(PlatformRadioButtonComponent)
-    contentRadioButtons: QueryList<PlatformRadioButtonComponent>;
+    @ContentChildren(RadioButtonComponent)
+    contentRadioButtons: QueryList<RadioButtonComponent>;
 
-    @ViewChildren(PlatformRadioButtonComponent)
-    viewRadioButtons: QueryList<PlatformRadioButtonComponent>;
+    @ViewChildren(RadioButtonComponent)
+    viewRadioButtons: QueryList<RadioButtonComponent>;
 
     /** Value change event for outer element */
     @Output()
-    change: EventEmitter<PlatformRadioButtonComponent> = new EventEmitter<PlatformRadioButtonComponent>();
+    change: EventEmitter<RadioButtonComponent> = new EventEmitter<RadioButtonComponent>();
 
     /** The currently selected radio button. Should match value. */
-    private _selected: PlatformRadioButtonComponent | null = null;
+    private _selected: RadioButtonComponent | null = null;
 
     private destroy$ = new Subject<boolean>();
 
@@ -123,14 +123,13 @@ export class RadioGroupComponent extends CollectionBaseInput implements AfterVie
      */
     private validateRadioButtons(): boolean {
         return (
-            this.contentRadioButtons.filter(
-                (item) => !(item instanceof PlatformRadioButtonComponent || item['renderer'])
-            ).length === 0
+            this.contentRadioButtons.filter((item) => !(item instanceof RadioButtonComponent || item['renderer']))
+                .length === 0
         );
     }
 
     /** selects the radio button with initial supplied value */
-    private selectGivenValue(buttons: QueryList<PlatformRadioButtonComponent>) {
+    private selectGivenValue(buttons: QueryList<RadioButtonComponent>) {
         buttons.forEach((button) => {
             if (button.value === this._value) {
                 button.checkRadioButton();
@@ -175,7 +174,7 @@ export class RadioGroupComponent extends CollectionBaseInput implements AfterVie
         }
     }
 
-    private _setButtonProperties(button: PlatformRadioButtonComponent) {
+    private _setButtonProperties(button: RadioButtonComponent) {
         button.name = this.name;
         button.disabled = this._disabled;
         button.size = this.size;
@@ -183,7 +182,7 @@ export class RadioGroupComponent extends CollectionBaseInput implements AfterVie
     }
 
     /** Called everytime a radio button is clicked, In content child as well as viewchild */
-    private _selectedRadioButtonChanged(radiobutton: PlatformRadioButtonComponent) {
+    private _selectedRadioButtonChanged(radiobutton: RadioButtonComponent) {
         if (this._selected !== radiobutton) {
             if (this._selected) {
                 this._selected.uncheckRadioButton();
@@ -196,7 +195,7 @@ export class RadioGroupComponent extends CollectionBaseInput implements AfterVie
         this._changeDetector.markForCheck();
     }
 
-    radioButtonSelected(event: PlatformRadioButtonComponent) {
+    radioButtonSelected(event: RadioButtonComponent) {
         this._selectedRadioButtonChanged(event);
     }
 
