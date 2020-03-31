@@ -1,0 +1,15 @@
+<fd-popover>
+    <fd-popover-control>
+        <fdp-menu-button [icon]="'world'" (buttonClick)="userDefined($event)" [type]="'positive'">
+            Actions
+        </fdp-menu-button>
+    </fd-popover-control>
+    <fd-popover-body>
+        <fdp-menu
+            [menuItems]="basicMenuData"
+            [showSeparator]="false"
+            [isScrolling]="false"
+            [width]="'400px'"
+        ></fdp-menu>
+    </fd-popover-body>
+</fd-popover>
