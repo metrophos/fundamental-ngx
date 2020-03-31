@@ -49,6 +49,14 @@ import { PlatformMenuXPositionExampleComponent } from './component-docs/platform
 import { PlatformMenuCascadeExampleComponent } from './component-docs/platform-menu/platform-menu-examples/platform-menu-cascade-example.component';
 import { PlatformMenuScrollingExampleComponent } from './component-docs/platform-menu/platform-menu-examples/platform-menu-scrolling-example.component';
 
+import { PlatformMenuButtonHeaderComponent } from './component-docs/platform-menu-button/platform-menu-button-header/platform-menu-button-header.component';
+import { 
+    PlatformMenuButtonExampleComponent 
+} from './component-docs/platform-menu-button/platform-menu-button-examples/platform-menu-button-examples.component';
+import { PlatformMenuButtonCozyExampleComponent } from './component-docs/platform-menu-button/platform-menu-button-examples/platform-menu-button-cozy-examples.component';
+import { PlatformMenuButtonCompactExampleComponent } from './component-docs/platform-menu-button/platform-menu-button-examples/platform-menu-button-compact-examples.component';
+import { PlatformMenuButtonDocsComponent } from './component-docs/platform-menu-button/platform-menu-button-docs.component';
+
 import { PlatformSelectDocsComponent } from './component-docs/platform-select/platform-select-docs.component';
 import { PlatformSelectHeaderComponent } from './component-docs/platform-select/platform-select-header/platform-select-header.component';
 import { PlatformSelectTypesDefaultExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-default-example.component';
@@ -103,7 +111,12 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         PlatformSelectTypesDefaultExampleComponent,
         PlatformSelectTypesNoBorderExampleComponent,
         PlatformSelectTypesSplitExampleComponent,
-        PlatformSelectTypesWithIconExampleComponent
+        PlatformSelectTypesWithIconExampleComponent,
+        PlatformMenuButtonDocsComponent,
+        PlatformMenuButtonExampleComponent,
+        PlatformMenuButtonCozyExampleComponent,
+        PlatformMenuButtonCompactExampleComponent,
+        PlatformMenuButtonHeaderComponent
     ],
     imports: [
         FundamentalNgxCoreModule,

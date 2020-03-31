@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'fdp-platform-menu-button-example',
-    templateUrl: './platform-menu-button-example.component.html',
+    selector: 'fdp-platform-menu-button-cozy-example',
+    templateUrl: './platform-menu-button-cozy-example.component.html',
 })
-export class PlatformMenuButtonExampleComponent {
+export class PlatformMenuButtonCozyExampleComponent {
     basicMenuData: any[] = [];
     item = '';
     userDefined(event: Event) {}
