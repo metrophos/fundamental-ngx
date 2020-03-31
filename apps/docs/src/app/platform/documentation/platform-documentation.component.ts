@@ -23,7 +23,8 @@ export class PlatformDocumentationComponent {
                   { url: 'platform/button', name: 'Button' }, 
                   { url: 'platform/menu', name: 'Menu' },
                   { url: 'platform/select', name: 'Select'},
-                  { url: 'platform/link', name: 'Link' }
+                  { url: 'platform/link', name: 'Link' },
+                  { url: 'platform/radio-group', name: 'Radio Button Group' },
                  ];
 
     layouts = [];

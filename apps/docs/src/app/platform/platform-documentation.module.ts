@@ -55,6 +55,11 @@ import { PlatformSelectTypesDefaultExampleComponent } from './component-docs/pla
 import { PlatformSelectTypesNoBorderExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-noborder-example.component';
 import { PlatformSelectTypesSplitExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-split-example.component';
 import { PlatformSelectTypesWithIconExampleComponent } from './component-docs/platform-select/platform-select-examples/platform-select-types-with-icon-example.component';
+import { PlatformRadioGroupHeaderComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-header/platform-radio-group-header.component';
+import { PlatformRadioGroupListItemsExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-list-items-examples.component';
+import { PlatformRadioGroupListExampleComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-examples/platform-radio-group-list-examples.component';
+import { PlatformRadioGroupDocsComponent } from './component-docs/platform-forms/radio-group/platform-radio-group-docs.component';
+
 import { StackblitzService } from '../documentation/core-helpers/stackblitz/stackblitz.service';
 import { FundamentalNgxCoreModule } from '@fundamental-ngx/core';
 import { FundamentalNgxPlatformModule } from '@fundamental-ngx/platform';
@@ -103,7 +108,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
         PlatformSelectTypesDefaultExampleComponent,
         PlatformSelectTypesNoBorderExampleComponent,
         PlatformSelectTypesSplitExampleComponent,
-        PlatformSelectTypesWithIconExampleComponent
+        PlatformSelectTypesWithIconExampleComponent,
+        PlatformRadioGroupHeaderComponent,
+        PlatformRadioGroupListItemsExampleComponent,
+        PlatformRadioGroupListExampleComponent,
+        PlatformRadioGroupDocsComponent
     ],
     imports: [
         FundamentalNgxCoreModule,

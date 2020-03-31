@@ -1,0 +1,15 @@
+<form [formGroup]="customForm" class="flex-form">
+    <fieldset fd-fieldset>
+        <fdp-radio-group
+            [id]="'radio1'"
+            [name]="name"
+            [list]="options"
+            [isInline]="false"
+            [compact]="compact"
+            [disabled]="disabled"
+            [state]="state"
+        >
+        </fdp-radio-group>
+        Radio Button Value: {{ customForm.controls.radioInput.value }}
+    </fieldset>
+</form>
